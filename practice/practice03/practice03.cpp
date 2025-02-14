@@ -1,4 +1,3 @@
-// practice03.cpp (Buggy Code to be tested)
 #include <iostream>
 #include <vector>
 #include </dev/school/Practice/Practice03/MathUtils.h>
