@@ -3,6 +3,12 @@
 #include <string>
 #include <limits>
 
+//Use std::list<std::string> to create a simple task list with the following menu options:
+//Add a task
+//Remove a task
+//Show tasks
+//Exit
+
 int getInt(std::string prompt) {
 	int input;
 	std::cout << prompt;
