@@ -2,6 +2,10 @@
 #include <limits>
 #include <iomanip>
 
+//Modify calculate<T> to handle both int and double input.
+//If the user enters a decimal, it uses double.
+//Otherwise, it uses int.
+
 template<typename t>
 t calculate(t x, t y, char op) {
 	if (op == '+') {
