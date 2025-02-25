@@ -1,57 +1,49 @@
 #include <iostream>
-#include <string>
-#include <limits>
+#include <vector>
+#include <numeric>
+#include <algorithm>
+
+//Write a program that takes user input for a list of 
+//integers, stores them in a std::vector, and prints 
+//them in reverse order using iterators.
 
 int getInt(std::string prompt) {
 	std::cout << prompt;
 	int input;
 	std::cin >> input;
 	while (std::cin.fail()) {
-		std::cout << "Invalid input! Try again: ";
+		std::cout << "Error. Invalid input. Try again: ";
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cin >> input;
 	}
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	return input;
 }
 
-std::string getString(std::string prompt) {
-	std::cout << prompt;
-	std::string input;
-	std::getline(std::cin, input);
-	while (std::cin.fail()) {
-		std::cout << "Invalid input! Try again: ";
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	}
-	return input;
-}
-
-void greet(std::string name = "Guest", std::string prefix = "Hello") {
-	std::cout << prefix << " " << name << '\n';
-}
-
 int main() {
+
+	std::vector<int> v;
+
 	while (true) {
-		std::cout << "1. Default greeting\n2. Greet by name\n3. Custom greeting\n0. Exit\n";
-		int choice = getInt("Choose an option: ");
-		switch (choice) {
-		case 0:
-			return 0;
-		case 1:
-			greet();
-			break;
-		case 2:
-			greet(getString("Enter name: "));
-			break;
-		case 3:
-			greet(getString("Enter name: "), getString("Enter greeting prefix: "));
-			break;
-		default:
-			std::cout << "Error. Not a valid choice\n";
+		std::cout << "\n1. Add a number to vector\n0. Continue\n";
+		int choice = getInt("Choice: ");
+		if (choice == 1) {
+			v.push_back(getInt("Enter an integer: "));
+		}
+		else if (choice == 0) {
 			break;
 		}
+		else {
+			std::cout << "Invalid choice. Must be 1 or 0!\n";
+		}
 	}
+
+	std::cout << "Your integers in reverse order: ";
+	for (auto it = v.end() - 1; it > v.begin(); it--) {
+		std::cout << *it << " ";
+	}
+	std::cout << '\n';
 
 	return 0;
 }
