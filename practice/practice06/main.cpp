@@ -2,6 +2,7 @@
 #include "Fraction.h"
 #include "MixedFraction.h"
 
+//gets validated user input
 int getInt(std::string prompt) {
 	int input;
 	while (true) {
@@ -19,10 +20,12 @@ int getInt(std::string prompt) {
 	}
 }
 
+//creates temporary fraction to be used in a given operation
 Fraction setFraction() {
 	Fraction f;
 	f.setNumerator(getInt("Input Numerator: "));
 
+	//gets user input until it is valid
 	while (true) {
 		try {
 			f.setDenominator(getInt("Input Denominator(not 0): "));
@@ -41,10 +44,10 @@ int main() {
 
 	Fraction f1;
 	Fraction f2;
-	Fraction f3;
 	MixedFraction mf1;
 
 	while (true) {
+		//basic menu ui
 		std::cout << "\nOptions:\n1. Enter a fraction manually\n2. Add a fraction\n3. Subtract a fraction\n4. Multiply by a fraction"
 			<< "\n5. Divide by a fraction\n6. Display as a mixed fraction\n7. Clear fraction\n8. Exit\n";
 		int choice = getInt("Choice: ");
@@ -62,24 +65,24 @@ int main() {
 			}
 			break;
 		case 2:
-			f3 = f1 + setFraction();
-			std::cout << "Your new fraction: " << f3 << "\n";
-			f1 = f3;
+			f2 = f1 + setFraction();
+			std::cout << "Your new fraction: " << f2 << "\n";
+			f1 = f2;
 			break;
 		case 3:
-			f3 = f1 - setFraction();
-			std::cout << "Your new fraction: " << f3 << "\n";
-			f1 = f3;
+			f2 = f1 - setFraction();
+			std::cout << "Your new fraction: " << f2 << "\n";
+			f1 = f2;
 			break;
 		case 4: 
-			f3 = f1 * setFraction();
-			std::cout << "Your new fraction: " << f3 << "\n";
-			f1 = f3;
+			f2 = f1 * setFraction();
+			std::cout << "Your new fraction: " << f2 << "\n";
+			f1 = f2;
 			break;
 		case 5:
 			while (true) {
 				try {
-					f3 = f1 / setFraction();
+					f2 = f1 / setFraction();
 					break;
 				}
 				catch (const std::exception& e) {
@@ -87,10 +90,11 @@ int main() {
 				}
 
 			}
-			std::cout << "Your new fraction: " << f3 << "\n";
-			f1 = f3;
+			std::cout << "Your new fraction: " << f2 << "\n";
+			f1 = f2;
 			break;
 		case 6:
+			//constructs a mixed fraction using current fraction
 			mf1 = f1;
 			std::cout << "\n" << mf1 << "\n";
 			break;
