@@ -40,7 +40,7 @@ int main() {
 			continue;
 		}
 		else if (choice == 0) {
-			return 0;
+			break;
 		}
 	}
 
