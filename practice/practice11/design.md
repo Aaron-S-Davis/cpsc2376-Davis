@@ -1,7 +1,7 @@
 ## **Board Game Tracker**
 A program for managing and keeping track of board games in storage or lent out. Each board game has a title and each customer can have a board game(s). The user can add and remove board games and lend out board games to customers.
 
-## **Nouns and Verbs**
+## **Entities, Attributes and Actions**
 Key Nouns: 
 BoardGame
 name
