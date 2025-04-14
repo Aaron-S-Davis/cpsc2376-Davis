@@ -18,6 +18,7 @@ return board game
 add customer
 remove customer
 
+```cpp
 // BoardGame.h
 class BoardGame {
 public:
@@ -48,6 +49,7 @@ public:
 	void listBoardGames();
 	void listCustomers();
 };
+```
 
 ```mermaid
 classDiagram
