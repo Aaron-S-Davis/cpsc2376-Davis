@@ -3,20 +3,20 @@ A program for managing and keeping track of board games in storage or lent out. 
 
 ## **Entities, Attributes and Actions**
 Key Nouns: 
-BoardGame
-name
-Customer 
-first name
-last name
-BoardGameTracker 
+BoardGame,
+name,
+Customer, 
+first name,
+last name,
+BoardGameTracker, 
 board games
 
 Actions: 
-Add board game
-remove board game
-lend board game
-return board game
-add customer
+Add board game,
+remove board game,
+lend board game,
+return board game,
+add customer,
 remove customer
 
 ## **Class Definitions**
