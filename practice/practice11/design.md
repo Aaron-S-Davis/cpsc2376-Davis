@@ -32,7 +32,7 @@ public:
 	vector<BoardGame> borrowedGames;
 	string firstName;
 	string lastName;
-	string getDesription();
+	string getDescription();
 };
 
 // BoardGameTracker.h
