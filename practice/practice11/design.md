@@ -18,11 +18,14 @@ return board game
 add customer
 remove customer
 
+// BoardGame.h
 class BoardGame {
 public:
 		string gameName;
 		string getDescription();
 };
+
+// Customer.h
 class Customer {
 public:
 	vector<BoardGame> borrowedGames;
@@ -30,6 +33,8 @@ public:
 	string lastName;
 	string getDesription();
 };
+
+// BoardGameTracker.h
 class BoardGameTracker {
 public:
 	vector<BoardGame> boardGames;
