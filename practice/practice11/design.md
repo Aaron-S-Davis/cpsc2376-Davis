@@ -8,11 +8,13 @@ name,
 Customer, 
 first name,
 last name,
+borrowed games,
 BoardGameTracker, 
-board games
+board games,
+customers
 
 Actions: 
-Add board game,
+add board game,
 remove board game,
 lend board game,
 return board game,
@@ -24,8 +26,8 @@ remove customer
 // BoardGame.h
 class BoardGame {
 public:
-		string gameName;
-		string getDescription();
+	string gameName;
+	string getDescription();
 };
 
 // Customer.h
