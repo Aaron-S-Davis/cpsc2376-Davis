@@ -7,9 +7,9 @@ This is a turn-based grid game written in C++ using SDL2. Players take turns pla
 
 ## Controls
 
--Left mouse click to place a piece
--Press 'space' to restart game
--Press 'esc' to quit game
+-Left mouse click to place a piece<br>
+-Press 'space' to restart game<br>
+-Press 'esc' to quit game<br>
 
 ## Screenshot
 
@@ -17,6 +17,6 @@ This is a turn-based grid game written in C++ using SDL2. Players take turns pla
 
 ## Extra Features
 
--Sound effects when placing a piece
--Highlighting current player
+-Sound effects when placing a piece<br>
+-Highlighting current player<br>
 
